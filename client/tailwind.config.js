@@ -3,8 +3,7 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
-    './pages/**/*.{js,jsx,ts,tsx}',
-    './app/components/**/*.{js,jsx,ts,tsx}'
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     fontSize: {
@@ -72,7 +71,7 @@ module.exports = {
           yellow: '#E2CF1D',
           pink: '#D46198',
           cyan: '#79BFFF'
-        }
+        },
       },
       transitionTimingFunction: {
         DEFAULT: 'ease-out'

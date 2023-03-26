@@ -1,0 +1,36 @@
+.formCont {
+  @apply bg-[#A7A7A7] w-full h-full grid font-normal text-2xl gap-x-11;
+  grid-template-columns: 1.95fr 1.05fr;
+  padding: 95px 80px 106px 80px;
+  border-radius: 0px 25px 25px 25px;
+}
+
+.form {
+  @apply flex flex-col w-full items-start;
+  row-gap: 184px;
+
+  &__inputs {
+    @apply flex flex-col gap-y-12 w-full;
+    input {
+      @apply bg-[#D9D9D9] w-full rounded-3xl border-none outline-none;
+      &:placeholder {
+        @apply text-[#626262];
+      }
+      padding: 30px 37px;
+    }
+  }
+
+  &__button {
+    @apply bg-[#5E5E5E] rounded-3xl;
+    padding: 30px 84px;
+  }
+}
+
+.swapCont {
+  @apply h-[50px] flex justify-end items-center;
+  &__el {
+    @apply bg-[#F8F8F8] rounded-full flex-center z-10 cursor-pointer;
+    width: 84px;
+    height: 84px;
+  }
+}

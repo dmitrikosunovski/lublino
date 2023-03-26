@@ -1,5 +1,5 @@
 .container {
-    @apply pt-28 pl-16 pb-20;
+    @apply pt-28 pl-16 pb-[200px];
     background-color: #D9D9D9;
 }
 .title {
@@ -9,6 +9,6 @@
     @apply text-2xl mt-10 mb-[112px]
 }
 .btn {
- @apply text-2xl text-white px-5 py-3 rounded-2xl border-0;
+ @apply text-2xl text-white px-5 py-3 rounded-2xl border-0 mb-[100px];
  background-color: #5E5E5E;   
 }
