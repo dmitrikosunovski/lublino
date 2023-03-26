@@ -1,0 +1,27 @@
+.cont{
+    @apply bg-[#D9D9D9] w-full h-full rounded-3xl flex flex-col;
+    padding: 37px 40px;
+}
+
+.title{
+    @apply font-medium mb-10 text-black;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.path{
+    @apply flex gap-x-1.5 w-full mb-14;
+
+    &__el{
+        @apply bg-[#AAAAAA] w-full h-14 rounded-3xl text-lg font-normal flex-center;
+    }
+}
+
+.info{
+    @apply flex flex-col gap-y-9 font-normal text-lg;
+}
+
+.footer{
+    @apply mt-auto pt-7 w-full;
+    border-top: 2px solid #AAAAAA;
+}

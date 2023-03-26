@@ -1,0 +1,14 @@
+.cont{
+    @apply w-full flex justify-start gap-x-6;
+}
+
+.tab{
+    @apply bg-[#C2C2C2] w-full flex-center font-normal text-2xl cursor-pointer;
+    border-radius: 25px 25px 0px 0px;
+    max-width: 388px;
+    height: 95px;
+}
+
+.active{
+    background-color: #A7A7A7 !important;
+}
