@@ -1,0 +1,14 @@
+.container {
+    @apply pt-28 pl-16 pb-20;
+    background-color: #D9D9D9;
+}
+.title {
+    @apply text-6xl
+}
+.subtitle {
+    @apply text-2xl mt-10 mb-[112px]
+}
+.btn {
+ @apply text-2xl text-white px-5 py-3 rounded-2xl border-0;
+ background-color: #5E5E5E;   
+}

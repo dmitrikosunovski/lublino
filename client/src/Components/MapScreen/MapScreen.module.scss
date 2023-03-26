@@ -1,0 +1,20 @@
+.container {
+    @apply pt-28 pl-16 pb-20 pr-20 mt-9 flex justify-between;
+    background-color: #D9D9D9;
+}
+.title {
+    @apply text-5xl whitespace-nowrap
+}
+.subtitle {
+    @apply text-2xl whitespace-nowrap
+}
+.btn {
+ @apply text-2xl text-white px-5 py-3 rounded-2xl border-0;
+ background-color: #5E5E5E;   
+}
+.sub {
+    @apply mt-[51px]
+}
+.cities {
+    @apply mt-[256px]
+}

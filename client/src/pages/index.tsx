@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { Header } from '@/Components/Header/Header'
+import { FirstScreen } from '@/Components/FirstScreen/FirstScreen'
+import { MapScreen } from '@/Components/MapScreen/MapScreen'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +17,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
+      <FirstScreen />
+      <MapScreen />
       <main className={styles.main}>
         <div className={styles.description}>
           <p>

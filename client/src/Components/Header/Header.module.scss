@@ -1,0 +1,36 @@
+.container {
+    @apply w-full bg-white
+}
+
+.topHeader {
+    @apply flex justify-between px-28
+}
+
+.logocont {
+    @apply pt-3
+}
+
+.rightcont {
+    @apply flex pt-16
+}
+
+.contacts {
+    @apply flex-col text-right
+}
+
+.conttext {
+    @apply text-lg
+}
+
+.btn {
+    @apply ml-10 py-4 px-6 rounded-2xl border-0 tracking-wide text-base;
+    background-color: #A7A7A7;
+}
+
+.lowHeader {
+    @apply mt-4 px-32 pb-10 flex justify-start gap-10
+}
+
+.lowHeaderText {
+    @apply text-lg
+}
