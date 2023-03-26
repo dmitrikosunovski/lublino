@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
@@ -30,6 +31,9 @@ module.exports = {
       '4xl': '1750px'
     },
     extend: {
+      fontFamily:{
+        sans:['Inter',...defaultTheme.fontFamily.sans]
+      },
       spacing: {
         5.5: '1.375rem'
       },

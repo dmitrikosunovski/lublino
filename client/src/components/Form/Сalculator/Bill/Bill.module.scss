@@ -18,7 +18,9 @@
 }
 
 .info{
-    @apply flex flex-col gap-y-9 font-normal text-lg;
+    @apply flex flex-col gap-y-9 font-normal;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .footer{

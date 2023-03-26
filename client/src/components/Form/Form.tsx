@@ -7,13 +7,12 @@ import Track from './Track/Track'
 import Сalculator from './Сalculator/Сalculator'
 
 const Form = () => {
-  const [path, setPath] = useState(0)
+  const [path, setPath] = useState(1)
 
   return (
     <div className={styles.cont}>
-      <Tabs setPath={setPath} path={path}/>
-      <Сalculator />
-      <Track />
+      <Tabs setPath={setPath} path={path} />
+      {path === 0 ? <Сalculator /> : <Track />}
     </div>
   )
 }
