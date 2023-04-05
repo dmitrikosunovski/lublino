@@ -18,8 +18,16 @@
     @apply flex-col text-right
 }
 
-.conttext {
-    @apply text-lg
+.conttext1 {
+    @apply text-lg flex gap-x-3;
+
+    h2 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 29px;
+    }
 }
 
 .btn {
@@ -28,9 +36,21 @@
 }
 
 .lowHeader {
-    @apply mt-6 px-32 pb-10 flex justify-start gap-9
+    @apply mt-6 px-32 py-5 flex justify-start gap-9;
+    background-color: red;
+    color: white;
 }
 
 .lowHeaderText {
-    @apply text-2xl font-normal
+    @apply text-2xl font-normal;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.line {
+    @apply w-full h-[2px] my-[8px];
+    background-color: black;
 }

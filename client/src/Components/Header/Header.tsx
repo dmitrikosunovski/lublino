@@ -1,3 +1,4 @@
+import { MailIcon } from '../Icons/MailIcon';
 import styles from './Header.module.scss';
 import Image from 'next/image'
 
@@ -17,11 +18,9 @@ export const Header = () => {
             </div>
             <div className={styles.rightcont}>
                 <div className={styles.contacts}>
-                <div className={styles.conttext}>+7 901 719 96 11</div>
-                <div className={styles.conttext}>contact@lublinoexpress.ru</div>
-                </div>
-                <div>
-                    <button className={styles.btn}>Войти</button>
+                <div className={styles.conttext}><h2>+7 (901) 719 96 11</h2></div>
+                <div className={styles.line}></div>
+                <div className={styles.conttext1}><MailIcon/><h3>contact@lublinoexpress.ru</h3></div>
                 </div>
             </div>
         </div>

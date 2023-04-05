@@ -3,6 +3,7 @@ import styles from './MapScreen.module.scss';
 
 export const MapScreen = () => {
     return (
+        <>
     <div className={styles.container}>
         <div>
             <div className={styles.title}>Мы можем доставить</div>
@@ -19,11 +20,13 @@ export const MapScreen = () => {
     <Image
         src="/map.png"
         alt="Map"
-        width={783}
-        height={526}
+        width={983}
+        height={626}
         priority
       />
     </div>
     </div>
+    <div className={styles.line}></div>
+    </>
     )
 }

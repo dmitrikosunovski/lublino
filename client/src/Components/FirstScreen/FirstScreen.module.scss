@@ -1,14 +1,45 @@
 .container {
-    @apply pt-28 pl-16 pb-[200px];
+    @apply pt-28 px-20 pb-[200px];
     background-color: #D9D9D9;
 }
+
 .title {
-    @apply text-6xl
+    @apply text-5xl;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 144%;
 }
+
 .subtitle {
     @apply text-2xl mt-10 mb-[112px]
 }
+
 .btn {
- @apply text-2xl text-white px-5 py-3 rounded-2xl border-0 mb-[100px];
- background-color: #5E5E5E;   
+    @apply text-2xl text-white px-9 py-3 rounded-2xl border-0 mb-[100px];
+    background-color: #3622F5;
+}
+
+.block {
+    @apply flex;
+}
+
+.blockRight {
+    @apply flex flex-col justify-start pl-[218px];
+}
+
+.track {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 144%;
+    color: #000000;
+}
+
+.trackInput {
+    @apply mt-5;
+
+    input {
+        @apply w-[589px] h-[56px] rounded-xl mb-[24px] pl-5;
+    }
 }
