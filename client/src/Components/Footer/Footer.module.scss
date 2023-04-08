@@ -1,0 +1,21 @@
+.cont {
+  @apply w-full;
+  margin-top: 60px;
+  padding-left: 176px;
+}
+
+.wrapper {
+  @apply flex flex-col gap-y-5;
+}
+
+.title {
+  @apply font-semibold;
+  font-size: 40px;
+  line-height: 58px;
+}
+
+.desc {
+  @apply font-medium;
+  font-size: 24px;
+  line-height: 29px;
+}
