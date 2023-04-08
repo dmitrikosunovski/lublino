@@ -6,12 +6,11 @@ export const FirstScreen = () => {
       <div className={styles.block}>
         <div className={styles.blockLeft}>
           <div>
-            <div className={styles.title}>Курьерская служба</div>
-            <div className={styles.title}>доставки Люблино</div>
+            <div className={styles.title}>
+              Курьерская служба доставки Люблино
+            </div>
           </div>
-          <div className={styles.subtitle}>
-            <div>Отправляй и получай!</div>
-          </div>
+          <div className={styles.subtitle}>Отправляй и получай!</div>
           <div>
             <button className={styles.btn}>Заказать</button>
           </div>

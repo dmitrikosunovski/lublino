@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { MailIcon } from '../Icons/MailIcon'
 import styles from './Header.module.scss'
 import Image from 'next/image'
@@ -30,10 +31,18 @@ export const Header = () => {
         </div>
       </div>
       <div className={styles.lowHeader}>
-        <div className={styles.lowHeaderText}>Главная</div>
-        <div className={styles.lowHeaderText}>Калькулятор</div>
-        <div className={styles.lowHeaderText}>Отследить посылку</div>
-        <div className={styles.lowHeaderText}>Документы</div>
+        <Link href={'#'} className={styles.lowHeaderText}>
+          Главная
+        </Link>
+        <Link href={'#'} className={styles.lowHeaderText}>
+          Калькулятор
+        </Link>
+        <Link href={'#'} className={styles.lowHeaderText}>
+          Отследить посылку
+        </Link>
+        <Link href={'#'} className={styles.lowHeaderText}>
+          Документы
+        </Link>
       </div>
     </div>
   )
