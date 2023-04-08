@@ -1,52 +1,55 @@
 .container {
-    @apply w-full bg-white
+  @apply w-full bg-white;
 }
 
 .topHeader {
-    @apply flex justify-between
+  @apply flex justify-between items-end;
 }
 
-.logocont {
-    @apply pt-3
+.logo {
+  @apply max-xl:w-[199px] max-xl:h-[60px]
+  max-lg:w-[145px] max-lg:h-[44px];
+}
+
+.info {
+  @apply max-xl:w-[231px] max-xl:h-[66px]
+  max-lg:w-[201px] max-lg:h-[57px];
 }
 
 .rightcont {
-    @apply flex pt-16
+  @apply flex;
 }
 
 .contacts {
-    @apply flex-col text-right
+  @apply flex-col text-right;
 }
 
 .conttext1 {
-    @apply text-lg flex gap-x-3;
+  @apply text-lg flex gap-x-3;
 
-    h2 {
-        font-weight: 500;
-        font-size: 44px;
-        line-height: 29px;
-    }
+  h2 {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 29px;
+  }
 }
 
 .btn {
-    @apply ml-10 py-4 px-6 rounded-2xl border-0 tracking-wide text-base;
-    background-color: #A7A7A7;
+  @apply ml-10 py-4 px-6 rounded-2xl border-0 tracking-wide text-base;
+  background-color: #a7a7a7;
 }
 
 .lowHeader {
-    @apply mt-6 py-5 flex justify-start gap-8;
-    padding-left: 76px;
-    background-color: red;
-    color: white;
+  @apply pl-[76px] max-2xl:pl-9 mt-6 py-5 flex justify-start gap-8 max-xl:mt-4;
+  background-color: red;
+  color: white;
 }
 
 .lowHeaderText {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
+  @apply text-xl font-medium max-lg:text-base;
 }
 
 .line {
-    @apply w-full h-[2px] my-[8px];
-    background-color: black;
+  @apply h-[2px] my-[8px] w-full;
+  background-color: black;
 }
