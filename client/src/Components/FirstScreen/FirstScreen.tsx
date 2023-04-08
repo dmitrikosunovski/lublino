@@ -18,7 +18,7 @@ export const FirstScreen = () => {
         <div className={styles.blockRight}>
           <div className={styles.track}>Трек номер</div>
           <div className={styles.trackInput}>
-            <input type='text' placeholder='Введите трек-номер' />
+            <input type='text' placeholder='Введите номер заказа' />
           </div>
           <div>
             <button className={styles.btn}>Отследить</button>

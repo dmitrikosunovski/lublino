@@ -1,25 +1,42 @@
 .container {
-    @apply pt-28 pl-16 pb-20 pr-20 mt-32 flex justify-between;
-    background-color: #D9D9D9;
+  @apply flex justify-between relative;
+  margin-top: 80px;
+  padding-top: 100px;
+  padding-left: 175px;
+  height: 713px;
+  background-color: #d9d9d9;
 }
+
+.bg {
+  @apply absolute z-10 object-contain;
+  top: 20%;
+  right: 6%;
+}
+
 .title {
-    @apply text-5xl whitespace-nowrap
+  @apply w-full font-semibold;
+  font-size: 40px;
+  line-height: 58px;
+  white-space: break-spaces;
 }
-.subtitle {
-    @apply text-2xl whitespace-nowrap
-}
+
 .btn {
- @apply text-2xl text-white px-5 py-3 rounded-2xl border-0;
- background-color: #5E5E5E;   
+  @apply text-2xl text-white px-5 py-3 rounded-2xl border-0;
+  background-color: #5e5e5e;
 }
+
 .sub {
-    @apply mt-[51px]
+  @apply font-medium;
+  font-size: 24px;
+  line-height: 29px;
 }
+
 .cities {
-    @apply mt-[256px]
+  @apply mt-[256px];
 }
+
 .line {
-    height: 69px;
-    background-color: #3622F5;
-    margin-top: 40px;
+  height: 69px;
+  background-color: #3622f5;
+  margin-top: 40px;
 }
