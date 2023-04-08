@@ -1,0 +1,30 @@
+.cont {
+  @apply w-full flex flex-col gap-y-8;
+  background: #ededed;
+  border-radius: 0px 0px 8px 8px;
+  padding: 32px 41px;
+}
+
+.info {
+  @apply flex flex-col w-full gap-y-5;
+  max-width: 308px;
+
+  &__el {
+    @apply w-full flex justify-between;
+    p:first-child {
+      @apply font-normal;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    p:last-child {
+      @apply font-semibold;
+    }
+  }
+}
+
+.text {
+  @apply font-medium;
+  white-space: break-spaces;
+  font-size: 16px;
+  line-height: 20px;
+}

@@ -1,0 +1,20 @@
+.cont {
+  @apply w-full flex flex-col;
+  row-gap: 18px;
+  background: #ededed;
+  border-radius: 0px 0px 8px 8px;
+  padding: 58px 106px;
+
+  p {
+    @apply font-medium;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.el {
+  @apply w-full grid grid-cols-3 grid-rows-1 items-start;
+  padding-left: 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #c2c2c2;
+}

@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import styles from './Сalculator.module.scss'
 //img
 import swap from '../../../assets/svg/swap.svg'
+import { handleFormProps } from '../Form'
 
 export interface formInputs {
   cityFrom: string
@@ -15,7 +16,11 @@ export interface formInputs {
   Bsize: number
 }
 
-const Сalculator = () => {
+interface СalculatorProps {
+  handleForm: (data: handleFormProps) => void
+}
+
+const Сalculator: React.FC<СalculatorProps> = ({ handleForm }) => {
   const {
     register,
     handleSubmit,
@@ -91,21 +96,23 @@ const Сalculator = () => {
           <input
             type='text'
             placeholder='Укажите ширину(см)'
-            {...register('Blenght', { required: true })}
+            {...register('Bwidth', { required: true })}
           />
         </div>
       </div>
       <div className={styles.lastLine}>
         <div className={styles.buttons}>
-          <button>Оформить</button>
-          <button>Рассчитать</button>
+          <button type='submit'>Оформить</button>
+          <button type='button' onClick={() => handleForm({ name: 'account' })}>
+            Рассчитать
+          </button>
         </div>
         <div className={styles.inpEl}>
-          <p>Ширина</p>
+          <p>Высота</p>
           <input
             type='text'
-            placeholder='Укажите ширину(см)'
-            {...register('Blenght', { required: true })}
+            placeholder='Укажите высоту(см)'
+            {...register('Bheight', { required: true })}
           />
         </div>
       </div>
