@@ -20,12 +20,13 @@ module.exports = {
       '7xl': ['5.8rem', '1.15']
     },
     screens: {
-      sm: '576px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1140px',
-      '2xl': '1300px',
-      '3xl': '1600px',
+      ss:'320px',
+      sm: '360px',
+      md: '430px',
+      lg: '768px',
+      xl: '1024px',
+      '2xl': '1440px',
+      '3xl': '1650px',
       '4xl': '1750px'
     },
     extend: {
