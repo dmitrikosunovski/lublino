@@ -11,9 +11,8 @@ const Form = () => {
 
   return (
     <div className={styles.cont}>
-      <Tabs setPath={setPath} path={path}/>
-      <Сalculator />
-      <Track />
+      <Tabs setPath={setPath} path={path} />
+      {path === 0 ? <Сalculator /> : <Track />}
     </div>
   )
 }
