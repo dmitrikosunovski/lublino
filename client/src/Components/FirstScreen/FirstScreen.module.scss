@@ -1,5 +1,7 @@
 .container {
-    @apply pt-28 px-20 pb-[200px];
+    @apply flex justify-center items-center pb-[200px] w-full;
+    padding: 0 175px;
+    height: 691px;
     background-color: #D9D9D9;
 }
 
@@ -21,11 +23,11 @@
 }
 
 .block {
-    @apply flex;
+    @apply flex justify-between w-full;
 }
 
 .blockRight {
-    @apply flex flex-col justify-start pl-[218px];
+    @apply flex flex-col justify-start;
 }
 
 .track {
