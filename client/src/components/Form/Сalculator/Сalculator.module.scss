@@ -3,7 +3,7 @@
   border-radius: 0px 8px 8px 8px;
 
   input {
-    @apply bg-[#D9D9D9] text-lg w-full rounded-lg border-none outline-none p-4 font-normal max-xl:py-3 max-lg:text-base;
+    @apply bg-white text-lg w-full rounded-lg border-none outline-none p-4 font-normal max-xl:py-3 max-lg:text-base;
     &:placeholder {
       color: #a7a7a7;
     }

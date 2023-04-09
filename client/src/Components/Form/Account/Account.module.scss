@@ -1,8 +1,7 @@
 .cont {
-  @apply w-full flex flex-col gap-y-8;
+  @apply py-8 px-10 w-full flex flex-col gap-y-8 max-xl:gap-y-6 max-lg:pl-5 max-sm:px-4 max-sm:pb-5;
   background: #ededed;
   border-radius: 0px 0px 8px 8px;
-  padding: 32px 41px;
 }
 
 .info {
@@ -10,11 +9,9 @@
   max-width: 308px;
 
   &__el {
-    @apply w-full flex justify-between;
+    @apply text-lg max-md:text-base w-full flex justify-between;
     p:first-child {
       @apply font-normal;
-      font-size: 20px;
-      line-height: 24px;
     }
     p:last-child {
       @apply font-semibold;
@@ -23,8 +20,6 @@
 }
 
 .text {
-  @apply font-medium;
+  @apply text-base font-medium max-md:text-xs;
   white-space: break-spaces;
-  font-size: 16px;
-  line-height: 20px;
 }
