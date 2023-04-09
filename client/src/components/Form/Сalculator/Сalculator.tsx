@@ -6,6 +6,7 @@ import styles from './Сalculator.module.scss'
 //img
 import swap from '../../../assets/svg/swap.svg'
 import { handleFormProps } from '../Form'
+import clsx from 'clsx'
 
 export interface formInputs {
   cityFrom: string
@@ -18,9 +19,10 @@ export interface formInputs {
 
 interface СalculatorProps {
   handleForm: (data: handleFormProps) => void
+  isAccount:boolean
 }
 
-const Сalculator: React.FC<СalculatorProps> = ({ handleForm }) => {
+const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
   const {
     register,
     handleSubmit,
@@ -43,7 +45,7 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm }) => {
   }
 
   return (
-    <form className={styles.cont} onSubmit={handleSubmit(Submit)}>
+    <form className={clsx(styles.cont,{[styles.cont_mod]:isAccount})} onSubmit={handleSubmit(Submit)}>
       <div className={styles.firstLine}>
         <div className={styles.inpEl}>
           <p>

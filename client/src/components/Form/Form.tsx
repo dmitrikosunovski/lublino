@@ -43,9 +43,9 @@ const Form = () => {
     <div className={styles.cont}>
       <Tabs setPath={setPath} path={path} />
       {path === 0 ? (
-        <Сalculator handleForm={handleForm} />
+        <Сalculator handleForm={handleForm} isAccount={isAccount}/>
       ) : (
-        <Track handleForm={handleForm} />
+        <Track handleForm={handleForm} isSearch={isSearch}/>
       )}
       {getSubContent()}
     </div>

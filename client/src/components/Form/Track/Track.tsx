@@ -2,16 +2,18 @@ import React, { useState } from 'react'
 import styles from './Track.module.scss'
 import search from '../../../assets/svg/search.svg'
 import { handleFormProps } from '../Form'
+import clsx from 'clsx'
 
 interface TrackProps {
   handleForm: (data: handleFormProps) => void
+  isSearch:boolean
 }
 
-const Track: React.FC<TrackProps> = ({ handleForm }) => {
+const Track: React.FC<TrackProps> = ({ handleForm,isSearch }) => {
   const [track, setTtrack] = useState('')
 
   return (
-    <div className={styles.cont}>
+    <div className={clsx(styles.cont,{[styles.cont_mod]:isSearch})}>
       <p className={styles.title}>
         Укажите номер заказа<span>*</span>
       </p>

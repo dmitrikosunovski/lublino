@@ -8,6 +8,10 @@
       color: #a7a7a7;
     }
   }
+
+  &_mod {
+    border-radius: 0px 8px 0px 0px;
+  }
 }
 
 .firstLine {
@@ -66,25 +70,25 @@
 }
 
 @media screen and (max-width: 500px) {
-  .cont{
+  .cont {
     @apply pb-7 max-ss:px-4 max-ss:pb-4;
-    input{
+    input {
       @apply max-w-[300px] max-sm:max-w-[254px] max-ss:max-w-[233px] max-sm:text-sm w-full px-4 text-base;
     }
   }
-  .firstLine{
+  .firstLine {
     @apply flex-col gap-3 relative mb-11;
   }
-  .swap{
+  .swap {
     @apply max-ss:right-0 absolute right-4 top-1/2 w-7 h-7 m-0;
   }
-  .secondLine{
+  .secondLine {
     @apply flex flex-col gap-3 mb-3;
   }
-  .line{
+  .line {
     @apply flex flex-col;
   }
-  .lastLine{
+  .lastLine {
     @apply max-ss:items-center flex flex-col-reverse gap-8 max-ss:gap-7;
   }
 }

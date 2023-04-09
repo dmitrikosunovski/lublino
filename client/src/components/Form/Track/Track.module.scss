@@ -1,6 +1,10 @@
 .cont {
   @apply px-20 pt-8 pb-12 bg-[#a7a7a7] w-full flex flex-col gap-y-2.5 max-xl:px-16 max-lg:px-6;
   border-radius: 0px 8px 8px 8px;
+
+  &_mod{
+    border-radius: 0px 8px 0px 0px;
+  }
 }
 
 .search {
