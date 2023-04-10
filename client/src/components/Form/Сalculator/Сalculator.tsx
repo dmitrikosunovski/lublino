@@ -105,7 +105,7 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
       <div className={styles.lastLine}>
         <div className={styles.buttons}>
           <button type='submit'>Оформить</button>
-          <button type='button' onClick={() => handleForm({ name: 'account' })}>
+          <button type='button'>
             Рассчитать
           </button>
         </div>

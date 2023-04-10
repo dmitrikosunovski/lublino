@@ -1,4 +1,4 @@
-import { API_URL, getContentType } from '@/api/interceptor'
+import { API_URL, getContentType } from '../api/interceptor'
 import axios from 'axios'
 
 export const ssrInstance = axios.create({

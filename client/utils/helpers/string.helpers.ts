@@ -1,10 +1,6 @@
 import qs from 'qs'
-import { IUser } from '@/services/user/interfaces/user.interface'
 
 export const mergeNames = (names: any[]) => names.filter((v) => v).join(' ')
-
-export const getUserFullName = (user?: IUser) =>
-  user ? mergeNames([user.firstName, user.middleName, user.lastName]) : ''
 
 export const getStringValue = (
   str: string | undefined | null | number,

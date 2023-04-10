@@ -58,3 +58,15 @@
     }
   }
 }
+
+.delivery{
+  @apply w-full flex justify-between px-4 py-4;
+  background-color: #EDEDED;
+  border-top: 1px solid #C2C2C2;
+  border-bottom: 1px solid #C2C2C2;
+}
+
+.deltop {
+  @apply flex justify-between pt-5 pb-2 px-4;
+  background-color: #EDEDED;
+}

@@ -1,6 +1,15 @@
+import { ChangeEvent, FC, useState } from 'react'
 import styles from './FirstScreen.module.scss'
+import { OtherService } from '../../../services/other/other.service'
+import getStatusGET from './getStatusGET'
 
-export const FirstScreen = () => {
+interface Tracker {
+  vvv: () => void,
+  handleChange: any,
+}
+
+export const FirstScreen: FC<Tracker> = ({ vvv, handleChange }) => {
+
   return (
     <div className={styles.container}>
       <div className={styles.block}>
@@ -17,13 +26,14 @@ export const FirstScreen = () => {
         <div className={styles.blockRight}>
           <div className={styles.track}>Номер заказа</div>
           <div className={styles.trackInput}>
-            <input type='text' placeholder='Введите номер заказа' />
+            <input type='text' placeholder='Введите номер заказа' onChange={handleChange} />
           </div>
           <div>
-            <button className={styles.btn}>Отследить</button>
+            <button className={styles.btn} onClick={() => vvv()}>Отследить</button>
           </div>
         </div>
       </div>
     </div>
   )
 }
+

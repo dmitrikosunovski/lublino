@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { APP_URL } from '@/constants'
-import { getTokensFromStorage } from '@/services/auth/auth.helpers'
-import { AuthService } from '@/services/auth/auth.service'
+import { APP_URL } from '../../constants'
+import { getTokensFromStorage } from '../services/auth/auth.helpers'
+import { AuthService } from '../services/auth/auth.service'
 import Cookies from 'js-cookie'
 
 export const API_URL = `${APP_URL}/api`

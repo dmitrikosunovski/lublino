@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { IMeta } from '@/utils/meta/meta.interface'
+import { IMeta } from '../../utils/meta/meta.interface'
 
 const Meta: React.FC<IMeta> = ({ title = '', description }) => {
 	const pageTitle = title ? `${title} | AAClinic` : 'AAClinic'

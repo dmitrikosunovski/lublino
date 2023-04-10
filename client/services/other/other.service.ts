@@ -1,6 +1,5 @@
-import { instance } from '@/api/interceptor'
-import { ApiResponse } from '@/services/api.interface'
-import { makeQuery } from '@/utils/helpers/string.helpers'
+import { instance } from '../../api/interceptor'
+import { makeQuery } from '../../utils/helpers/string.helpers'
 
 export const OtherService = {
   async getTarrifes() {
@@ -104,6 +103,11 @@ export const OtherService = {
       '/gen/getlabel',
       createdekiveryDto
     )
+
+    return response.data
+  },
+  async getStatus(number: any) {
+    const response = await instance.get(`http://localhost:5000/api/base/getstatusforparcelsimple/${number}`)
 
     return response.data
   },

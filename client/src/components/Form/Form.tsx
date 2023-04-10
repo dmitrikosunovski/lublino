@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 //styles
 import styles from './Form.module.scss'
 //components
@@ -9,11 +9,14 @@ import Account from './Account/Account'
 import TrackList from './TrackList/TrackList'
 
 export interface handleFormProps {
-  name: 'account' | 'search'
+  name?: 'account' | 'search'
   number?: string
+  vvv: () => void
+  handleChange: any
+  some: any
 }
 
-const Form = () => {
+const Form: FC<handleFormProps> = ({ vvv, handleChange, some }) => {
   const [path, setPath] = useState(1)
   const [isAccount, setIsAccount] = useState(false)
   const [isSearch, setIsSearch] = useState(false)
@@ -45,7 +48,7 @@ const Form = () => {
       {path === 0 ? (
         <Сalculator handleForm={handleForm} isAccount={isAccount}/>
       ) : (
-        <Track handleForm={handleForm} isSearch={isSearch}/>
+        <Track vvv={vvv} handleChange={handleChange} isSearch={isSearch} some={some}/>
       )}
       {getSubContent()}
     </div>
