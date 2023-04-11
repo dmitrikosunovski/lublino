@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 //css
@@ -7,10 +7,16 @@ import styles from './Сalculator.module.scss'
 import swap from '../../../assets/svg/swap.svg'
 import { handleFormProps } from '../Form'
 import clsx from 'clsx'
+import { useMutation, useQueryClient } from 'react-query'
+import { OtherService } from '../../../../services/other/other.service'
+import { queryClient } from '../../../../utils/react-query'
 
 export interface formInputs {
   cityFrom: string
   cityTo: string
+  cityFromIndex: string
+  cityToIndex: string
+  insurance: string
   Bheight: number
   Bwidth: number
   Blenght: number
@@ -22,17 +28,56 @@ interface СalculatorProps {
   isAccount:boolean
 }
 
-const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
+const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
+  const queryClient = useQueryClient()
+  const [goo, setGoo] = useState({height: 0, length: 0, width: 0, weight: 0})
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
     getValues
-  } = useForm<formInputs>()
+  } = useForm();
 
-  const Submit = (data: formInputs) => {
-    console.log(data)
+  const changeHandler = useCallback(
+    (e) => {
+      setGoo((prev) => ({
+        ...prev,
+        [e.target.name]: e.target.value
+      }))
+    },
+    [goo]
+  )
+
+  const { mutate } = useMutation(
+    'create-calkulator',
+    (data) =>
+      OtherService.postCalcone({
+        //@ts-ignore
+        estimatedCost: data.insurance,
+        //@ts-ignore
+        receiverIndex: data.cityToIndex,
+        //@ts-ignore
+        senderIndex: data.cityToIndex,
+        //@ts-ignore
+        receiverAddress: data.cityTo,
+        //@ts-ignore
+        cityname: data.cityFrom,
+        goods: [goo]
+      }),
+    {
+      onSuccess(data) {
+        queryClient.invalidateQueries({ queryKey: [`calkulator`] })
+      },
+      onError(data: any) {
+        console.log('errrroorrr')
+      }
+    }
+  )
+
+  const Submit = (data: any) => {
+    mutate(data)
   }
 
   const swapFun = () => {
@@ -71,6 +116,40 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
           />
         </div>
       </div>
+      <div className={styles.firstLine}>
+        <div className={styles.inpEl}>
+          <p>
+            Индекс отправления<span>*</span>
+          </p>
+          <input
+            type='text'
+            placeholder='Укажите индекс отправления'
+            {...register('cityFromIndex', { required: true })}
+          />
+        </div>
+        <div className={styles.inpEl}>
+          <p>
+            Индекс назначения<span>*</span>
+          </p>
+          <input
+            type='text'
+            placeholder='Укажите индекс назначения'
+            {...register('cityToIndex', { required: true })}
+          />
+        </div>
+      </div>
+      <div className={styles.firstLine}>
+        <div className={styles.inpEl1}>
+          <p>
+            Страховка<span>*</span>
+          </p>
+          <input
+            type='text'
+            placeholder='Укажите Страховку'
+            {...register('insurance', { required: true })}
+          />
+        </div>
+      </div>
       <div className={styles.secondLine}>
         <div className={styles.inpEl}>
           <p>
@@ -80,6 +159,9 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
             type='text'
             placeholder='Укажите вес(гр.)'
             {...register('Bsize', { required: true })}
+            onChange={changeHandler}
+            value={goo.weight}
+            name="weight"
           />
         </div>
         <div className={styles.inpEl}>
@@ -88,6 +170,9 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
             type='text'
             placeholder='Укажите длину(см)'
             {...register('Blenght', { required: true })}
+            onChange={changeHandler}
+            value={goo.length}
+            name="length"
           />
         </div>
       </div>
@@ -99,6 +184,9 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
             type='text'
             placeholder='Укажите ширину(см)'
             {...register('Bwidth', { required: true })}
+            onChange={changeHandler}
+            value={goo.width}
+            name="width"
           />
         </div>
       </div>
@@ -115,6 +203,9 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
             type='text'
             placeholder='Укажите высоту(см)'
             {...register('Bheight', { required: true })}
+            onChange={changeHandler}
+            value={goo.height}
+            name="height"
           />
         </div>
       </div>
@@ -123,6 +214,3 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm,isAccount }) => {
 }
 
 export default Сalculator
-// <button className={styles.form__button} type='submit'>
-//   Оформить
-// </button>

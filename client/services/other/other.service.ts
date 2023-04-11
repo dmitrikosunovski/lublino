@@ -22,10 +22,10 @@ export const OtherService = {
 
     return response.data
   },
-  async getCalcone() {
+  async postCalcone(DataQuery = {}) {
     const query = makeQuery({})
     const response = await instance.post(
-      '/gen/calcone' + query
+      'http://localhost:5000/api/base/calcone', DataQuery
     )
 
     return response.data

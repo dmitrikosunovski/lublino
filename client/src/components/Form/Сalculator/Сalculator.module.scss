@@ -47,6 +47,18 @@
   }
 }
 
+.inpEl1 {
+  @apply flex flex-col gap-y-2.5 w-1/4;
+
+  p {
+    @apply font-medium text-base;
+  }
+
+  span {
+    color: #e60029;
+  }
+}
+
 .swap {
   @apply w-[69px] bg-[#F8F8F8] max-lg:w-[56px] max-lg:h-[30px] max-lg:p-1 max-lg:mb-1.5 h-10 rounded-full self-end mb-2 flex-center z-10 cursor-pointer p-2;
   img {
