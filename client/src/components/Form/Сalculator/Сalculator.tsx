@@ -9,7 +9,6 @@ import { handleFormProps } from '../Form'
 import clsx from 'clsx'
 import { useMutation, useQueryClient } from 'react-query'
 import { OtherService } from '../../../../services/other/other.service'
-import { queryClient } from '../../../../utils/react-query'
 
 export interface formInputs {
   cityFrom: string
@@ -41,7 +40,7 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
   } = useForm();
 
   const changeHandler = useCallback(
-    (e) => {
+    (e:any) => {
       setGoo((prev) => ({
         ...prev,
         [e.target.name]: e.target.value
@@ -77,6 +76,7 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
   )
 
   const Submit = (data: any) => {
+    handleForm({name:'account'})
     mutate(data)
   }
 
@@ -116,7 +116,7 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
           />
         </div>
       </div>
-      <div className={styles.firstLine}>
+      <div className={styles.line}>
         <div className={styles.inpEl}>
           <p>
             Индекс отправления<span>*</span>
@@ -138,8 +138,8 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
           />
         </div>
       </div>
-      <div className={styles.firstLine}>
-        <div className={styles.inpEl1}>
+      <div className={styles.line}>
+        <div className={styles.inpEl}>
           <p>
             Страховка<span>*</span>
           </p>
@@ -149,6 +149,7 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
             {...register('insurance', { required: true })}
           />
         </div>
+        <div></div>
       </div>
       <div className={styles.secondLine}>
         <div className={styles.inpEl}>
@@ -192,8 +193,8 @@ const Сalculator: React.FC<СalculatorProps> = ({ handleForm, isAccount }) => {
       </div>
       <div className={styles.lastLine}>
         <div className={styles.buttons}>
-          <button type='submit'>Оформить</button>
-          <button type='button'>
+          <button type='button'>Оформить</button>
+          <button type='submit'>
             Рассчитать
           </button>
         </div>

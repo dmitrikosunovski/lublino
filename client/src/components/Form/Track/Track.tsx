@@ -7,7 +7,7 @@ import getStatusGET from '@/Components/FirstScreen/getStatusGET'
 import DileveryList from './DileveryList'
 
 interface Tracker {
-  vvv: () => void,
+  vvv?: () => void,
   handleChange: () => void,
   isSearch: any,
   some: []
@@ -33,7 +33,7 @@ const Track: FC<Tracker> = ({ vvv, handleChange, isSearch, some }) => {
           <button
             className={styles.search__button}
             type='button'
-            onClick={() => vvv()}
+            onClick={() => vvv?vvv():''}
           >
             Отследить
           </button>

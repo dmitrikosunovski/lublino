@@ -11,9 +11,9 @@ import TrackList from './TrackList/TrackList'
 export interface handleFormProps {
   name?: 'account' | 'search'
   number?: string
-  vvv: () => void
-  handleChange: any
-  some: any
+  vvv?: () => void
+  handleChange?: any
+  some?: any
 }
 
 const Form: FC<handleFormProps> = ({ vvv, handleChange, some }) => {
